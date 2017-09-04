@@ -12,9 +12,9 @@ var eval = {
         var operands = [];
         var stack = [];
 
-        var arr = str.split(/[+\-*\/]/);
+        //var arr = str.split("");
 
-        return arr;
+        var arr = str;
         for(var i = 0; i < arr.length; i++)
         {
             if (arr[i] in operators)
@@ -33,7 +33,9 @@ var eval = {
                 }
             }
             else {
-                stack.push(arr[i]);
+                var nb = parseFloat(arr.substring(i));
+                stack.push(nb);
+                i += nb.toString().length - 1;
             }
         }
         operands.forEach(function (t) { stack.push(t); });

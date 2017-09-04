@@ -17,4 +17,12 @@ describe('eval expr', function () {
     it('should return 3.1 for 1.1+2', function () {
         should(eval.evaluateExpression("1.1+2")).equal(3.1);
     });
+
+    it('should return 2 for 3-1', function () {
+        should(eval.evaluateExpression("3-1")).equal(2);
+    });
+
+    it('should return 2 for (3-1)', function () {
+        should(eval.evaluateExpression("(3-1)")).equal(2);
+    });
 });
