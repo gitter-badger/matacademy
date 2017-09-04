@@ -1,0 +1,21 @@
+<div>
+  <label>Insert new task</label> <input #task />
+  <button (click)="addTask(task.value); task.value=''">
+    Add
+  </button>
+</div>
+<ul class="tasks">
+  <li *ngFor="let task of tasks">
+    <span *ngIf="task.done === false;else other_content">
+      <button class="update" (click)="markDone(task)" >Mark Done</button>
+      <span style="text-decoration: none;">{{task.text}}</span>
+    </span>
+    <ng-template #other_content>
+      <button class="update" disabled>You Did It!</button>
+      <span  style="text-decoration: line-through;">ergerg{{task.text}}</span>
+    </ng-template>
+    <button class="delete"
+            (click)="deleteTask(task); $event.stopPropagation()">Delete from list</button>
+  </li>
+</ul>
+
