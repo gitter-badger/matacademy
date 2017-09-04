@@ -51,11 +51,6 @@ var eval = {
             }
             else {
                 var nb = parseFloat(arr.substring(i));
-                // if (isNaN(nb))
-                // {
-                //
-                //     return stack + "fucking nan";
-                // }
                 stack.push(nb);
                 i += nb.toString().length - 1;
             }

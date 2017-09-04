@@ -66,5 +66,30 @@ describe('eval expr', function () {
         it('should return 45.5 for 1/2    + (5 + 4) * 5', function () {
             should(eval.evaluateExpression("1/2    + (5 + 4) * 5")).equal(45.5);
         });
+
+        it('should return 52.52 for 1/2 + (5.5 + 4.7) * 5.1', function () {
+            should(eval.evaluateExpression("1/2 + (5.5 + 4.7) * 5.1")).equal(52.52);
+        });
+
+        it('should return -52.52 for -1/2 + (-5.5 - 4.7) * 5.1', function () {
+            should(eval.evaluateExpression("-1/2 + (-5.5 - 4.7) * 5.1")).equal(-52.52);
+        });
+
+        it('should return 1.67 for 1+2/3', function () {
+            should(eval.evaluateExpression("1+2/3")).equal(1.67);
+        });
+
+        it('should return 1 for 1+2/45/78/78', function () {
+            should(eval.evaluateExpression("1+2/45/78/78")).equal(1);
+        });
+
+        it('should return 0 for 0', function () {
+            should(eval.evaluateExpression("0")).equal(0);
+        });
+
+        it('should return 18 for 18', function () {
+            should(eval.evaluateExpression("18")).equal(18);
+        });
+
     });
 });
