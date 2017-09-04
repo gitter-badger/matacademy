@@ -90,6 +90,26 @@ describe('eval expr', function () {
         it('should return 18 for 18', function () {
             should(eval.evaluateExpression("18")).equal(18);
         });
+    });
 
+    describe('undefined', function () {
+        it('should return undefined for "(1/2 + 5 + 4*5', function () {
+            should(eval.evaluateExpression("(1/2 + 5 + 4*5")).equal(undefined);
+        });
+        it('should return undefined for "1/2 ++ 5 + 4) * 5', function () {
+            should(eval.evaluateExpression("1/2 ++ 5 + 4) * 5")).equal(undefined);
+        });
+        it('should return undefined for [1/2] + 5 + 4 * 5', function () {
+            should(eval.evaluateExpression("[1/2] + 5 + 4 * 5")).equal(undefined);
+        });
+        it('should return undefined for 1/2 >> 5 + 4) * 5', function () {
+            should(eval.evaluateExpression("1/2 >> 5 + 4) * 5")).equal(undefined);
+        });
+        it('should return undefined for "1/2 + 5a + 4b * 5', function () {
+            should(eval.evaluateExpression("1/2 + 5a + 4b * 5")).equal(undefined);
+        });
+        it('should return undefined for trololo', function () {
+            should(eval.evaluateExpression("trololo")).equal(undefined);
+        });
     });
 });

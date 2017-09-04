@@ -19,17 +19,20 @@ var eval = {
 
         var operands = [];
         var stack = [];
+        var opened = false;
 
-        var arr = str.replace(/[ \f\n\r\t\v]/g, "");
-
+        if (str.search(/^[\d\s.+\-()\/*]+$/) === -1)
+             return undefined;
+        if (str.search(/[+\-\/*][+\-\/*]+/) !== -1)
+            return undefined;
+        var arr = str.replace(/[\s]/g, "");
         for(var i = 0; i < arr.length; i++)
         {
-            // while (arr[i] === ' ')
-            //     i++;
             if (arr[i] in operators)
             {
                 if (arr[i] === ')')
                 {
+                    opened = false;
                     var op = operands.pop();
                     while (op !== '(')
                     {
@@ -39,26 +42,32 @@ var eval = {
                 }
                 else {
                     if (arr[i] !== '(') {
-
                         var lastOperand = operands[operands.length - 1];
+
                         while (priority[arr[i]] <= priority[lastOperand]) {
                             stack.push(operands.pop());
                             lastOperand = operands[operands.length - 1];
                         }
                     }
+                    else
+                        opened = true;
                     operands.push(arr[i]);
                 }
             }
             else {
                 var nb = parseFloat(arr.substring(i));
+
                 stack.push(nb);
                 i += nb.toString().length - 1;
             }
         }
+        if (opened)
+            return undefined;
         while (operands.length > 0)
             stack.push(operands.pop());
 
-        //return stack;
+
+        //return stack + operands;
 
         var outputStack = [];
 
@@ -74,7 +83,7 @@ var eval = {
         }
 
         if (outputStack.length > 1)
-            return "error";
+            return undefined;
         else
             return +outputStack.pop().toFixed(2);
     }
