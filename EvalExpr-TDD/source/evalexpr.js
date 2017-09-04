@@ -5,19 +5,25 @@ var eval = {
             '-': function(x, y) {return x - y},
             '*': function(x, y) {return x * y},
             '/': function(x, y) {return x / y},
-            ')': function () {return;},
-            '(': function () {return;}
+            ')': function () {},
+            '(': function () {}
     };
+        var priority = {
+            '(': 0,
+            ')': 0,
+            '+': 1,
+            '-': 1,
+            '*': 2,
+            '/': 2
+        }
 
         var operands = [];
         var stack = [];
 
-        //var arr = str.split("");
-
         var arr = str;
         for(var i = 0; i < arr.length; i++)
         {
-            if (arr[i] === ' ')
+            while (arr[i] === ' ')
                 i++;
             if (arr[i] in operators)
             {
@@ -31,7 +37,15 @@ var eval = {
                     }
                 }
                 else {
-                 operands.push(arr[i]);
+                    if (arr[i] !== '(') {
+
+                        var lastOperand = operands[operands.length - 1];
+                        while (priority[arr[i]] <= priority[lastOperand]) {
+                            stack.push(operands.pop());
+                            lastOperand = operands[operands.length - 1];
+                        }
+                    }
+                    operands.push(arr[i]);
                 }
             }
             else {
@@ -40,7 +54,10 @@ var eval = {
                 i += nb.toString().length - 1;
             }
         }
-        operands.forEach(function (t) { stack.push(t); });
+        while (operands.length > 0)
+            stack.push(operands.pop());
+
+        // return stack;
 
         var outputStack = [];
 

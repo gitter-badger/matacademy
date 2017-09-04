@@ -58,5 +58,9 @@ describe('eval expr', function () {
         it('should return 25.5 for 1/2 + 5 + 4*5', function () {
             should(eval.evaluateExpression("1/2 + 5 + 4*5")).equal(25.5);
         });
+
+        it('should return 45.5 for 1/2 + (5 + 4) * 5', function () {
+            should(eval.evaluateExpression("1/2 + (5 + 4) * 5")).equal(45.5);
+        });
     });
 });
