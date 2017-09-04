@@ -1,0 +1,47 @@
+C:\Users\Настя\documents\visual studio 2017\Projects\HumanReadableCode\HumanReadableCode\bin\Debug\netcoreapp1.1\HumanReadableCode.deps.json
+C:\Users\Настя\documents\visual studio 2017\Projects\HumanReadableCode\HumanReadableCode\bin\Debug\netcoreapp1.1\HumanReadableCode.runtimeconfig.json
+C:\Users\Настя\documents\visual studio 2017\Projects\HumanReadableCode\HumanReadableCode\bin\Debug\netcoreapp1.1\HumanReadableCode.runtimeconfig.dev.json
+C:\Users\Настя\documents\visual studio 2017\Projects\HumanReadableCode\HumanReadableCode\bin\Debug\netcoreapp1.1\HumanReadableCode.dll
+C:\Users\Настя\documents\visual studio 2017\Projects\HumanReadableCode\HumanReadableCode\bin\Debug\netcoreapp1.1\HumanReadableCode.pdb
+C:\Users\Настя\documents\visual studio 2017\Projects\HumanReadableCode\HumanReadableCode\obj\Debug\netcoreapp1.1\HumanReadableCode.csprojResolveAssemblyReference.cache
+C:\Users\Настя\documents\visual studio 2017\Projects\HumanReadableCode\HumanReadableCode\obj\Debug\netcoreapp1.1\HumanReadableCode.AssemblyInfo.cs
+C:\Users\Настя\documents\visual studio 2017\Projects\HumanReadableCode\HumanReadableCode\obj\Debug\netcoreapp1.1\HumanReadableCode.dll
+C:\Users\Настя\documents\visual studio 2017\Projects\HumanReadableCode\HumanReadableCode\obj\Debug\netcoreapp1.1\HumanReadableCode.pdb
+C:\Users\antrepyton\Downloads\HumanReadableCode\HumanReadableCode\HumanReadableCode\bin\Debug\netcoreapp1.1\HumanReadableCode.deps.json
+C:\Users\antrepyton\Downloads\HumanReadableCode\HumanReadableCode\HumanReadableCode\bin\Debug\netcoreapp1.1\HumanReadableCode.runtimeconfig.json
+C:\Users\antrepyton\Downloads\HumanReadableCode\HumanReadableCode\HumanReadableCode\bin\Debug\netcoreapp1.1\HumanReadableCode.runtimeconfig.dev.json
+C:\Users\antrepyton\Downloads\HumanReadableCode\HumanReadableCode\HumanReadableCode\bin\Debug\netcoreapp1.1\HumanReadableCode.dll
+C:\Users\antrepyton\Downloads\HumanReadableCode\HumanReadableCode\HumanReadableCode\bin\Debug\netcoreapp1.1\HumanReadableCode.pdb
+C:\Users\antrepyton\Downloads\HumanReadableCode\HumanReadableCode\HumanReadableCode\obj\Debug\netcoreapp1.1\HumanReadableCode.csprojResolveAssemblyReference.cache
+C:\Users\antrepyton\Downloads\HumanReadableCode\HumanReadableCode\HumanReadableCode\obj\Debug\netcoreapp1.1\HumanReadableCode.csproj.CoreCompileInputs.cache
+C:\Users\antrepyton\Downloads\HumanReadableCode\HumanReadableCode\HumanReadableCode\obj\Debug\netcoreapp1.1\HumanReadableCode.AssemblyInfo.cs
+C:\Users\antrepyton\Downloads\HumanReadableCode\HumanReadableCode\HumanReadableCode\obj\Debug\netcoreapp1.1\HumanReadableCode.dll
+C:\Users\antrepyton\Downloads\HumanReadableCode\HumanReadableCode\HumanReadableCode\obj\Debug\netcoreapp1.1\HumanReadableCode.pdb
+C:\Users\Настя\Downloads\MaterialiseAcademy\HumanReadableCode\HumanReadableCode\HumanReadableCode\bin\Debug\netcoreapp1.1\HumanReadableCode.deps.json
+C:\Users\Настя\Downloads\MaterialiseAcademy\HumanReadableCode\HumanReadableCode\HumanReadableCode\bin\Debug\netcoreapp1.1\HumanReadableCode.runtimeconfig.json
+C:\Users\Настя\Downloads\MaterialiseAcademy\HumanReadableCode\HumanReadableCode\HumanReadableCode\bin\Debug\netcoreapp1.1\HumanReadableCode.runtimeconfig.dev.json
+C:\Users\Настя\Downloads\MaterialiseAcademy\HumanReadableCode\HumanReadableCode\HumanReadableCode\bin\Debug\netcoreapp1.1\HumanReadableCode.dll
+C:\Users\Настя\Downloads\MaterialiseAcademy\HumanReadableCode\HumanReadableCode\HumanReadableCode\bin\Debug\netcoreapp1.1\HumanReadableCode.pdb
+C:\Users\Настя\Downloads\MaterialiseAcademy\HumanReadableCode\HumanReadableCode\HumanReadableCode\obj\Debug\netcoreapp1.1\HumanReadableCode.AssemblyInfo.cs
+C:\Users\Настя\Downloads\MaterialiseAcademy\HumanReadableCode\HumanReadableCode\HumanReadableCode\obj\Debug\netcoreapp1.1\HumanReadableCode.dll
+C:\Users\Настя\Downloads\MaterialiseAcademy\HumanReadableCode\HumanReadableCode\HumanReadableCode\obj\Debug\netcoreapp1.1\HumanReadableCode.pdb
+C:\Users\Настя\Downloads\MaterialiseAcademy\HumanReadableCode\HumanReadableCode\HumanReadableCode\obj\Debug\netcoreapp1.1\HumanReadableCode.csprojResolveAssemblyReference.cache
+C:\Users\antrepyton\Downloads\MaterialiseAcademy\HumanReadableCode\HumanReadableCode\bin\Debug\netcoreapp1.1\HumanReadableCode.deps.json
+C:\Users\antrepyton\Downloads\MaterialiseAcademy\HumanReadableCode\HumanReadableCode\bin\Debug\netcoreapp1.1\HumanReadableCode.runtimeconfig.json
+C:\Users\antrepyton\Downloads\MaterialiseAcademy\HumanReadableCode\HumanReadableCode\bin\Debug\netcoreapp1.1\HumanReadableCode.runtimeconfig.dev.json
+C:\Users\antrepyton\Downloads\MaterialiseAcademy\HumanReadableCode\HumanReadableCode\bin\Debug\netcoreapp1.1\HumanReadableCode.dll
+C:\Users\antrepyton\Downloads\MaterialiseAcademy\HumanReadableCode\HumanReadableCode\bin\Debug\netcoreapp1.1\HumanReadableCode.pdb
+C:\Users\antrepyton\Downloads\MaterialiseAcademy\HumanReadableCode\HumanReadableCode\obj\Debug\netcoreapp1.1\HumanReadableCode.csprojResolveAssemblyReference.cache
+C:\Users\antrepyton\Downloads\MaterialiseAcademy\HumanReadableCode\HumanReadableCode\obj\Debug\netcoreapp1.1\HumanReadableCode.csproj.CoreCompileInputs.cache
+C:\Users\antrepyton\Downloads\MaterialiseAcademy\HumanReadableCode\HumanReadableCode\obj\Debug\netcoreapp1.1\HumanReadableCode.AssemblyInfo.cs
+C:\Users\antrepyton\Downloads\MaterialiseAcademy\HumanReadableCode\HumanReadableCode\obj\Debug\netcoreapp1.1\HumanReadableCode.dll
+C:\Users\antrepyton\Downloads\MaterialiseAcademy\HumanReadableCode\HumanReadableCode\obj\Debug\netcoreapp1.1\HumanReadableCode.pdb
+C:\Users\Настя\Downloads\MaterialiseAcademy\MaterialiseAcademy\MaterialiseAcademy\HumanReadableCode\HumanReadableCode\bin\Debug\netcoreapp1.1\HumanReadableCode.deps.json
+C:\Users\Настя\Downloads\MaterialiseAcademy\MaterialiseAcademy\MaterialiseAcademy\HumanReadableCode\HumanReadableCode\bin\Debug\netcoreapp1.1\HumanReadableCode.runtimeconfig.json
+C:\Users\Настя\Downloads\MaterialiseAcademy\MaterialiseAcademy\MaterialiseAcademy\HumanReadableCode\HumanReadableCode\bin\Debug\netcoreapp1.1\HumanReadableCode.runtimeconfig.dev.json
+C:\Users\Настя\Downloads\MaterialiseAcademy\MaterialiseAcademy\MaterialiseAcademy\HumanReadableCode\HumanReadableCode\obj\Debug\netcoreapp1.1\HumanReadableCode.csprojResolveAssemblyReference.cache
+C:\Users\Настя\Downloads\MaterialiseAcademy\MaterialiseAcademy\MaterialiseAcademy\HumanReadableCode\HumanReadableCode\obj\Debug\netcoreapp1.1\HumanReadableCode.AssemblyInfo.cs
+C:\Users\Настя\Downloads\MaterialiseAcademy\MaterialiseAcademy\MaterialiseAcademy\HumanReadableCode\HumanReadableCode\obj\Debug\netcoreapp1.1\HumanReadableCode.dll
+C:\Users\Настя\Downloads\MaterialiseAcademy\MaterialiseAcademy\MaterialiseAcademy\HumanReadableCode\HumanReadableCode\obj\Debug\netcoreapp1.1\HumanReadableCode.pdb
+C:\Users\Настя\Downloads\MaterialiseAcademy\MaterialiseAcademy\MaterialiseAcademy\HumanReadableCode\HumanReadableCode\bin\Debug\netcoreapp1.1\HumanReadableCode.dll
+C:\Users\Настя\Downloads\MaterialiseAcademy\MaterialiseAcademy\MaterialiseAcademy\HumanReadableCode\HumanReadableCode\bin\Debug\netcoreapp1.1\HumanReadableCode.pdb

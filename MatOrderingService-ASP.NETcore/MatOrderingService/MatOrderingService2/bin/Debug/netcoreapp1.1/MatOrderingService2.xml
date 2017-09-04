@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MatOrderingService2</name>
+    </assembly>
+    <members>
+        <member name="M:MatOrderingService2.Controllers.OrdersController.Put(System.Int32,MatOrderingService2.Models.EditOrder)">
+            <summary>
+            Updates an Order's Details by unique id
+            </summary>
+            <param name="id">ID of updated order</param>
+            <param name="order">New Properties of the order</param>
+            <response code="200">Order created</response>
+            <response code="404">Order is not found</response>
+        </member>
+    </members>
+</doc>
