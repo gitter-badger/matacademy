@@ -20,11 +20,12 @@ var eval = {
         var operands = [];
         var stack = [];
 
-        var arr = str;
+        var arr = str.replace(/[ \f\n\r\t\v]/g, "");
+
         for(var i = 0; i < arr.length; i++)
         {
-            while (arr[i] === ' ')
-                i++;
+            // while (arr[i] === ' ')
+            //     i++;
             if (arr[i] in operators)
             {
                 if (arr[i] === ')')
@@ -50,6 +51,11 @@ var eval = {
             }
             else {
                 var nb = parseFloat(arr.substring(i));
+                // if (isNaN(nb))
+                // {
+                //
+                //     return stack + "fucking nan";
+                // }
                 stack.push(nb);
                 i += nb.toString().length - 1;
             }
@@ -57,7 +63,7 @@ var eval = {
         while (operands.length > 0)
             stack.push(operands.pop());
 
-        // return stack;
+        //return stack;
 
         var outputStack = [];
 
