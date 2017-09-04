@@ -1,6 +1,13 @@
 var eval = {
     evaluateExpression: function (str) {
-        var operators = ['+', '-', '/', '*', '(', ')'];
+        var operators = {
+                '+': function(x, y) {return x + y},
+            '-': function(x, y) {return x - y},
+            '*': function(x, y) {return x * y},
+            '/': function(x, y) {return x / y},
+            ')': function () {return;},
+            '(': function () {return;}
+    };
 
         var operands = [];
         var stack = [];
@@ -9,7 +16,8 @@ var eval = {
 
         for(var i = 0; i < arr.length; i++)
         {
-            if (operators.includes(arr[i]))
+            // if (operators.includes(arr[i]))
+            if (arr[i] in operators)
             {
                 if (arr[i] === ')')
                 {
@@ -33,17 +41,10 @@ var eval = {
         var outputStack = [];
 
         for(i = 0; i < stack.length; i++) {
-            if (operators.includes(stack[i]))
+            if (stack[i] in operators)
             {
                 var n2 = parseFloat(outputStack.pop()), n1 = parseFloat(outputStack.pop());
-                if (stack[i] === '+')
-                    outputStack.push(n2 + n1);
-                else if (stack[i] === '-')
-                    outputStack.push(n2 - n1);
-                else if (stack[i] === '*')
-                    outputStack.push(n2 * n1);
-                else if (stack[i] === '/')
-                    outputStack.push(n2 / n1);
+                outputStack.push(operators[stack[i]](n1, n2));
             }
             else {
                 outputStack.push(stack[i]);
