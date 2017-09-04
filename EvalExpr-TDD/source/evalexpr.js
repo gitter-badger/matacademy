@@ -12,11 +12,11 @@ var eval = {
         var operands = [];
         var stack = [];
 
-        var arr = str.split("");
+        var arr = str.split(/[+\-*\/]/);
 
+        return arr;
         for(var i = 0; i < arr.length; i++)
         {
-            // if (operators.includes(arr[i]))
             if (arr[i] in operators)
             {
                 if (arr[i] === ')')
