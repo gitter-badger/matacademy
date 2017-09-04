@@ -17,6 +17,8 @@ var eval = {
         var arr = str;
         for(var i = 0; i < arr.length; i++)
         {
+            if (arr[i] === ' ')
+                i++;
             if (arr[i] in operators)
             {
                 if (arr[i] === ')')
@@ -56,7 +58,7 @@ var eval = {
         if (outputStack.length > 1)
             return "error";
         else
-            return parseFloat(outputStack.pop());
+            return +outputStack.pop().toFixed(2);
     }
 };
 
