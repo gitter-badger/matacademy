@@ -1,0 +1,42 @@
+body {
+    padding: 50px;
+}
+
+.box {
+    position: relative;
+    margin: 30%;
+    transform-style: preserve-3d;
+    perspective: 400px;
+}
+.side {
+    position: absolute;;
+    width: 200px;
+    height: 200px;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 1);
+}
+.front {
+    /*background-color: aqua;*/
+    transform: rotateY(0deg) translateZ(100px);
+}
+.back{
+    /*background-color: red;*/
+    transform: rotateX(180deg) translateZ(100px);
+}
+
+.left{
+    /*background-color: yellow;*/
+    transform: rotateY(-90deg) translateZ(100px);
+}
+.right{
+    /*background-color: green;*/
+    transform: rotateY(90deg) translateZ(100px);
+}
+.bottom{
+    /*background-color: deeppink;*/
+    transform: rotateX(-90deg) translateZ(100px);
+}
+
+.top{
+    /*background-color: blueviolet;*/
+    transform: rotateX(90deg) translateZ(100px) ;
+}
