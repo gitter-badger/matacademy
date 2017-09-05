@@ -12,7 +12,7 @@
     </span>
     <ng-template #other_content>
       <button class="update" disabled>You Did It!</button>
-      <span  style="text-decoration: line-through;">ergerg{{task.text}}</span>
+      <span  style="text-decoration: line-through;">{{task.text}}</span>
     </ng-template>
     <button class="delete"
             (click)="deleteTask(task); $event.stopPropagation()">Delete from list</button>
