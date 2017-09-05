@@ -1,21 +1,22 @@
+const operators = {
+    '+': function(x, y) {return x + y},
+    '-': function(x, y) {return x - y},
+    '*': function(x, y) {return x * y},
+    '/': function(x, y) {return x / y},
+    ')': function () {},
+    '(': function () {}
+};
+const priority = {
+    '(': 0,
+    ')': 0,
+    '+': 1,
+    '-': 1,
+    '*': 2,
+    '/': 2
+};
+
 var eval = {
     evaluateExpression: function (str) {
-        var operators = {
-                '+': function(x, y) {return x + y},
-            '-': function(x, y) {return x - y},
-            '*': function(x, y) {return x * y},
-            '/': function(x, y) {return x / y},
-            ')': function () {},
-            '(': function () {}
-        };
-        var priority = {
-            '(': 0,
-            ')': 0,
-            '+': 1,
-            '-': 1,
-            '*': 2,
-            '/': 2
-        };
 
         var operands = [];
         var stack = [];
@@ -25,15 +26,15 @@ var eval = {
              return undefined;
         if (str.search(/[+\-\/*][+\-\/*]+/) !== -1)
             return undefined;
-        arr = str;
-        //var arr = str.replace(/[\s]/g, "");
-        for(var i = 0; i < arr.length; i++)
+
+        for(var i = 0; i < str.length; i++)
         {
-            while (arr[i] === ' ')
+            while (str[i] === ' ')
                 i++;
-            if (arr[i] in operators)
+
+            if (str[i] in operators)
             {
-                if (arr[i] === ')')
+                if (str[i] === ')')
                 {
                     opened = false;
                     var op = operands.pop();
@@ -44,20 +45,19 @@ var eval = {
                     }
                 }
                 else {
-                    if (arr[i] !== '(') {
-                        if (arr[i] === '-' &&
-                            (arr.substring(i < 1? 0 : i - 1).search(/^\d-\d/) === -1
-                            && arr.substring(i < 1? 0 : i - 1).search(/^ - /) === -1))
+                    if (str[i] !== '(') {
+                        if (str[i] === '-' &&
+                            (str.substring(i < 1? 0 : i - 1).search(/^\d-\d/) === -1
+                            && str.substring(i < 1? 0 : i - 1).search(/^ - /) === -1))
                         {
-
-                            var nb = parseFloat(arr.substring(i));
+                            var nb = parseFloat(str.substring(i));
                             stack.push(nb);
                             i += nb.toString().length;
                         }
                         else {
                             var lastOperand = operands[operands.length - 1];
 
-                            while (priority[arr[i]] <= priority[lastOperand]) {
+                            while (priority[str[i]] <= priority[lastOperand]) {
                                 stack.push(operands.pop());
                                 lastOperand = operands[operands.length - 1];
                             }
@@ -65,42 +65,39 @@ var eval = {
                     }
                     else
                         opened = true;
-                    if (arr[i] !== ' ')
-                        operands.push(arr[i]);
+                    if (str[i] !== ' ')
+                        operands.push(str[i]);
                 }
             }
             else {
-                nb = parseFloat(arr.substring(i));
+                nb = parseFloat(str.substring(i));
                 stack.push(nb);
                 i += nb.toString().length - 1;
             }
         }
-
         if (opened)
             return undefined;
+
         while (operands.length > 0)
             stack.push(operands.pop());
 
-
         var outputStack = [];
 
-        var results = [];
-        for(i = 0; i < stack.length; i++) {
-            if (stack[i] in operators)
+        stack.forEach(function (token) {
+            if (token in operators)
             {
-                var n2 = outputStack.pop(), n1 = outputStack.pop();
-                outputStack.push(operators[stack[i]](n1, n2));
-                results.push(operators[stack[i]](n1, n2));
+                var n2 = outputStack.pop(),
+                    n1 = outputStack.pop();
+                outputStack.push(operators[token](n1, n2));
             }
             else {
-                outputStack.push(stack[i]);
+                outputStack.push(token);
             }
-        }
+        });
 
         if (outputStack.length > 1)
             return undefined;
-        else
-            return +outputStack.pop().toFixed(2);
+        return +outputStack.pop().toFixed(2);
     }
 };
 
