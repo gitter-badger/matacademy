@@ -46,12 +46,11 @@ var eval = {
                 else {
                     if (arr[i] !== '(') {
                         if (arr[i] === '-' &&
-                            (arr.substring(i < 1? 0 : i - 1).search(/^\d-\d/) === -1))
-                            // || arr.substring(i < 1 ? 0 : i - 1).search(/\d - \d/) === -1))
+                            (arr.substring(i < 1? 0 : i - 1).search(/^\d-\d/) === -1
+                            && arr.substring(i < 1? 0 : i - 1).search(/^ - /) === -1))
                         {
 
-                            return arr.substring(i < 1? 0 : i - 1);
-                            var nb = parseFloat(arr.substring(i).trim());
+                            var nb = parseFloat(arr.substring(i));
                             stack.push(nb);
                             i += nb.toString().length;
                         }
@@ -66,21 +65,23 @@ var eval = {
                     }
                     else
                         opened = true;
-                    operands.push(arr[i]);
+                    if (arr[i] !== ' ')
+                        operands.push(arr[i]);
                 }
             }
             else {
-                nb = parseFloat(arr.substring(i).trim());
+                nb = parseFloat(arr.substring(i));
                 stack.push(nb);
                 i += nb.toString().length - 1;
             }
         }
+
         if (opened)
             return undefined;
         while (operands.length > 0)
             stack.push(operands.pop());
 
-         // return stack;
+
         var outputStack = [];
 
         var results = [];
@@ -96,7 +97,6 @@ var eval = {
             }
         }
 
-        // return outputStack;
         if (outputStack.length > 1)
             return undefined;
         else
