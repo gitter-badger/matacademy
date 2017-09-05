@@ -7,7 +7,7 @@ var eval = {
             '/': function(x, y) {return x / y},
             ')': function () {},
             '(': function () {}
-    };
+        };
         var priority = {
             '(': 0,
             ')': 0,
@@ -15,7 +15,7 @@ var eval = {
             '-': 1,
             '*': 2,
             '/': 2
-        }
+        };
 
         var operands = [];
         var stack = [];
@@ -25,9 +25,12 @@ var eval = {
              return undefined;
         if (str.search(/[+\-\/*][+\-\/*]+/) !== -1)
             return undefined;
-        var arr = str.replace(/[\s]/g, "");
+        arr = str;
+        //var arr = str.replace(/[\s]/g, "");
         for(var i = 0; i < arr.length; i++)
         {
+            while (arr[i] === ' ')
+                i++;
             if (arr[i] in operators)
             {
                 if (arr[i] === ')')
@@ -42,11 +45,23 @@ var eval = {
                 }
                 else {
                     if (arr[i] !== '(') {
-                        var lastOperand = operands[operands.length - 1];
+                        if (arr[i] === '-' &&
+                            (arr.substring(i < 1? 0 : i - 1).search(/^\d-\d/) === -1))
+                            // || arr.substring(i < 1 ? 0 : i - 1).search(/\d - \d/) === -1))
+                        {
 
-                        while (priority[arr[i]] <= priority[lastOperand]) {
-                            stack.push(operands.pop());
-                            lastOperand = operands[operands.length - 1];
+                            return arr.substring(i < 1? 0 : i - 1);
+                            var nb = parseFloat(arr.substring(i).trim());
+                            stack.push(nb);
+                            i += nb.toString().length;
+                        }
+                        else {
+                            var lastOperand = operands[operands.length - 1];
+
+                            while (priority[arr[i]] <= priority[lastOperand]) {
+                                stack.push(operands.pop());
+                                lastOperand = operands[operands.length - 1];
+                            }
                         }
                     }
                     else
@@ -55,8 +70,7 @@ var eval = {
                 }
             }
             else {
-                var nb = parseFloat(arr.substring(i));
-
+                nb = parseFloat(arr.substring(i).trim());
                 stack.push(nb);
                 i += nb.toString().length - 1;
             }
@@ -66,22 +80,23 @@ var eval = {
         while (operands.length > 0)
             stack.push(operands.pop());
 
-
-        //return stack + operands;
-
+         // return stack;
         var outputStack = [];
 
+        var results = [];
         for(i = 0; i < stack.length; i++) {
             if (stack[i] in operators)
             {
-                var n2 = parseFloat(outputStack.pop()), n1 = parseFloat(outputStack.pop());
+                var n2 = outputStack.pop(), n1 = outputStack.pop();
                 outputStack.push(operators[stack[i]](n1, n2));
+                results.push(operators[stack[i]](n1, n2));
             }
             else {
                 outputStack.push(stack[i]);
             }
         }
 
+        // return outputStack;
         if (outputStack.length > 1)
             return undefined;
         else
